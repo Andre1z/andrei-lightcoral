@@ -1,0 +1,79 @@
+/* Basic Reset & Layout */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: 5px;
+    }
+    .container {
+      display: flex;
+      height: calc(100vh - 60px); /* Subtract header height */
+    }
+    nav {
+      background-color: #f0f0f0;
+      width: 220px;
+      padding: 10px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+    nav button, nav label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    nav button {
+      width: 100%;
+      padding: 10px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      text-align: left;
+    }
+    nav label {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    nav input[type="color"] {
+      width: 100%;
+      height: 40px;
+      border: none;
+      cursor: pointer;
+    }
+    main {
+      flex-grow: 1;
+      position: relative;
+    }
+    #drawingArea {
+      width: 100%;
+      height: 100%;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      cursor: crosshair;
+    }
+    
+    /* Optional: style for bounding box and handles */
+    .bbox {
+      fill: none;
+      stroke: #00f;
+      stroke-dasharray: 4;
+      pointer-events: none; /* Let the background capture the mouse, not the bounding box */
+    }
+    .handle {
+      fill: #00f;
+      stroke: #fff;
+      stroke-width: 1px;
+      cursor: pointer;
+    }
+    .rotate-handle {
+      fill: #f00;
+      cursor: alias; /* or move, or crosshair, or your preferred icon */
+    }
