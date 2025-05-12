@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Editor SVG - Versión Alternativa</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
