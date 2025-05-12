@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor SVG - Versión Completa</title>
+  <!-- Enlaza la hoja de estilos -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Encabezado de la aplicación -->
+  <header>
+    <h1>Editor de Formas SVG</h1>
+    <p>SVG Editor con selección y transformación</p>
+  </header>
+  
+  <!-- Contenedor principal: barra de herramientas y área de dibujo -->
+  <div class="container">
+    <!-- Barra de herramientas -->
+    <nav>
+      <button id="btnSelect">Seleccionar/Editar</button>
+      <button id="btnRect">Rectángulo</button>
+      <button id="btnCircle">Círculo</button>
+      <button id="btnEllipse">Elipse</button>
+      <button id="btnLine">Línea</button>
+      <button id="btnPolyLine">Polilínea</button>
+      <button id="btnPolygon">Polígono</button>
+      <button id="btnPath">Path</button>
+      
+      <!-- Controles de color -->
+      <div class="colors">
+        <label for="colorFill">Relleno</label>
+        <input type="color" id="colorFill" value="#ffffff">
+      
+        <label for="colorStroke">Trazo</label>
+        <input type="color" id="colorStroke" value="#000000">
+      </div>
+    </nav>
+    
+    <!-- Área de dibujo SVG -->
+    <main>
+      <svg id="canvas"></svg>
+    </main>
+  </div>
+
+  <!-- Enlaza el archivo de lógica JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>

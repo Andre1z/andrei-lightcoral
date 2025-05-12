@@ -1,97 +1,92 @@
-/* ==========================================
-   Reset y configuración base
-   ========================================== */
+/* Reinicio y configuración básica */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fuente divertida y desenfadada */
+  background: linear-gradient(135deg, #FF8A00, #E52B50); /* Fondo vibrante */
+  color: #333;
+  line-height: 1.6;
 }
 
-/* ==========================================
-   Encabezado
-   ========================================== */
+/* Header con gradiente y sombra de texto */
 header {
-  background: #444;
+  background: linear-gradient(90deg, #FF416C, #FF4B2B);
   color: #fff;
-  padding: 15px;
+  padding: 20px;
   text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* ==========================================
-   Estructura principal
-   ========================================== */
+/* Contenedor principal para navegación y área de dibujo */
 .container {
   display: flex;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 120px);
 }
 
-/* ------------------------------------------
-   Barra de herramientas (nav)
-   ------------------------------------------ */
+/* Barra de herramientas (nav) con gradiente */
 nav {
-  background: #f8f8f8;
-  width: 220px;
-  padding: 10px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  background: linear-gradient(180deg, #8A2BE2, #DC143C);
+  width: 240px;
+  padding: 20px;
+  color: #fff;
 }
-nav button,
+
+/* Botones en la barra de herramientas */
+nav button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  background: #FFCC00;
+  color: #333;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+nav button:hover {
+  background: #FF9900;
+  transform: scale(1.05);
+}
+
+/* Contenedor para los selectores de color */
+nav .colors {
+  margin-top: 20px;
+}
+
 nav label {
   display: block;
-  margin-bottom: 10px;
-}
-nav button {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  background: #fff;
-  cursor: pointer;
-  text-align: left;
-}
-nav label {
-  margin-top: 20px;
+  margin-bottom: 5px;
   font-weight: bold;
 }
+
 nav input[type="color"] {
   width: 100%;
   height: 40px;
   border: none;
+  margin-bottom: 15px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
-/* ------------------------------------------
-   Área del dibujo
-   ------------------------------------------ */
+/* Área principal (donde se encuentra el SVG) */
 main {
-  flex-grow: 1;
+  flex: 1;
+  background: radial-gradient(circle, #F9F9F9 0%, #FFD1DC 100%);
   position: relative;
 }
-#canvas {
+
+/* Lienzo SVG con borde y sombra interna */
+svg#canvas {
   width: 100%;
   height: 100%;
-  border: 1px solid #ccc;
-  background: #fff;
-  cursor: crosshair;
-}
-
-/* ------------------------------------------
-   Bounding Box y manejadores
-   ------------------------------------------ */
-.bounding-box {
-  fill: none;
-  stroke: #00f;
-  stroke-dasharray: 4;
-  pointer-events: none;
-}
-.handle {
-  fill: #00f;
-  stroke: #fff;
-  stroke-width: 1px;
-  cursor: pointer;
-}
-.rotate-handle {
-  fill: #f00;
-  cursor: alias;
+  background: #FFFFFF;
+  border: 4px dashed #FF1493;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
