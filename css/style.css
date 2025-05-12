@@ -1,0 +1,97 @@
+/* ==========================================
+   Reset y configuración base
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* ==========================================
+   Encabezado
+   ========================================== */
+header {
+  background: #444;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+/* ==========================================
+   Estructura principal
+   ========================================== */
+.container {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+/* ------------------------------------------
+   Barra de herramientas (nav)
+   ------------------------------------------ */
+nav {
+  background: #f8f8f8;
+  width: 220px;
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+nav button,
+nav label {
+  display: block;
+  margin-bottom: 10px;
+}
+nav button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+}
+nav label {
+  margin-top: 20px;
+  font-weight: bold;
+}
+nav input[type="color"] {
+  width: 100%;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ------------------------------------------
+   Área del dibujo
+   ------------------------------------------ */
+main {
+  flex-grow: 1;
+  position: relative;
+}
+#canvas {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: crosshair;
+}
+
+/* ------------------------------------------
+   Bounding Box y manejadores
+   ------------------------------------------ */
+.bounding-box {
+  fill: none;
+  stroke: #00f;
+  stroke-dasharray: 4;
+  pointer-events: none;
+}
+.handle {
+  fill: #00f;
+  stroke: #fff;
+  stroke-width: 1px;
+  cursor: pointer;
+}
+.rotate-handle {
+  fill: #f00;
+  cursor: alias;
+}
